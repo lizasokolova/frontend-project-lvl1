@@ -7,18 +7,26 @@ function getRandomInt(min, max) {
 }
 
 const parityCheck = (userName) => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-    const comparisonNumber = getRandomInt(1, 500);
-    console.log(`Question: ${comparisonNumber}`);
-    const checkResult = readlineSync.question('Your answer: ');
 
-    if (comparisonNumber % 2 == 0 && checkResult === 'yes') {
-        console.log(`Correct! Congradulations, ${userName}!`);
-    } else if (comparisonNumber % 2 != 0 && checkResult === 'no') {
-        console.log(`Correct! Congradulations, ${userName}!`);
-    } else {
-        console.log(`Sorry ${userName}! It is a mistake. Please try again...`);
+    for (let i = 0; i < 3; i++) {
+        console.log('Answer "yes" if the number is even, otherwise answer "no".');
+        const comparisonNumber = getRandomInt(1, 500);
+        console.log(`Question: ${comparisonNumber}`);
+        const checkResult = readlineSync.question('Your answer: ');
+
+        if (comparisonNumber % 2 == 0 && checkResult === 'yes') {
+            let corectAnswer;
+            corectAnswer = console.log('Correct!');
+        } else if (comparisonNumber % 2 != 0 && checkResult === 'no') {
+            let corectAnswer;
+            corectAnswer = console.log('Correct!');
+        } else {
+            let wrongAnswer;
+            wrongAnswer = console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);
+            break;
+        };
     };
 };
+
 
 export default parityCheck;

@@ -15,16 +15,14 @@ const parityCheck = (userName) => {
         const checkResult = readlineSync.question('Your answer: ');
 
         if (comparisonNumber % 2 == 0 && checkResult === 'yes') {
-            let corectAnswer;
-            corectAnswer = console.log('Correct!');
+            console.log('Correct!');
         } else if (comparisonNumber % 2 != 0 && checkResult === 'no') {
-            let corectAnswer;
-            corectAnswer = console.log('Correct!');
+            console.log('Correct!');
         } else {
-            let wrongAnswer;
-            wrongAnswer = console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);
+            console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);
             break;
         };
+        console.log(`Congratulations, ${userName}!`);
     };
 };
 

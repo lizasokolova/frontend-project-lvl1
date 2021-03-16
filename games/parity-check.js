@@ -7,7 +7,6 @@ function getRandomInt(min, max) {
 }
 
 const parityCheck = (userName) => {
-
     for (let i = 0; i < 3; i++) {
         console.log('Answer "yes" if the number is even, otherwise answer "no".');
         const comparisonNumber = getRandomInt(1, 500);

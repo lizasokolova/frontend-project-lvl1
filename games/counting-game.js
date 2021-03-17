@@ -10,7 +10,7 @@ const countingGame = (userName) => {
         console.log('What is the result of the expression?');
         console.log(`Question: ${firstNumber} ${cases[randomIndex][0]} ${secondNumber}`);
         const checkResult = readlineSync.question('Your answer: ');
-        if (cases[randomIndex][1]) {
+        if (cases[randomIndex][1] == checkResult) {
             console.log('Correct!');
         } else {
             console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);

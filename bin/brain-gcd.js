@@ -1,6 +1,5 @@
-// import gameGreeting from '../src/cli.js';
-// import parityCheck from '../games/parity-check.js';
+import gameGreeting from '../src/cli.js';
+import divisorGame from '../games/divisor-game.js';
 
-// const userName = gameGreeting();
-// parityCheck(userName);
-
+const userName = gameGreeting();
+divisorGame(userName);

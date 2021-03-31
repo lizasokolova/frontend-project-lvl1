@@ -10,8 +10,14 @@ const parityCheck = (userName) => {
 
         if (comparisonNumber % 2 == 0 && checkResult === 'yes') {
             console.log('Correct!');
+            if (i === 2) {
+                console.log(`Congratulations, ${userName}!`);
+            };
         } else if (comparisonNumber % 2 != 0 && checkResult === 'no') {
             console.log('Correct!');
+            if (i === 2) {
+                console.log(`Congratulations, ${userName}!`);
+            };
         } else {
             console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);
             break;

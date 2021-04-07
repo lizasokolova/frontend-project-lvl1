@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomInt from './utils.js';
 
 function isPrime(num) {
-    for (var i = 2; i < num; i++) {
+    for (let i = 2; i < num; i++) {
         if (num % i === 0) {
             return false;
         }

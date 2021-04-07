@@ -2,6 +2,7 @@ import readlineSync from 'readline-sync';
 import getRandomInt from './utils.js';
 
 const countingGame = (userName) => {
+    let isSuccess = false;
     for (let i = 0; i < 3; i++) {
         const firstNumber = getRandomInt(0, 100);
         const secondNumber = getRandomInt(0, 100);
@@ -19,7 +20,6 @@ const countingGame = (userName) => {
             console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);
             break;
         };
-        console.log(`Congratulations, ${userName}!`);
     };
 };
 

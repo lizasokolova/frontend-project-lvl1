@@ -22,7 +22,6 @@ const parityCheck = (userName) => {
             console.log(`${checkResult} is wrong answer ;(. Correct answer was another. Let's try again, ${userName}!`);
             break;
         };
-        console.log(`Congratulations, ${userName}!`);
     };
 };
 

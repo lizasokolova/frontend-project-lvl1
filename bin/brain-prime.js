@@ -3,4 +3,3 @@ import primeGame from '../src/games/prime.js';
 
 const userName = gameGreeting();
 primeGame(userName);
-

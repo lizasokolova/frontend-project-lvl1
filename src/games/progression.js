@@ -17,19 +17,23 @@ const getProgression = (progressionStart, progressionStep, progressionLength) =>
 };
 
 
-const progressionGame = (array, hiddenNumber, userName) => {
+const progressionGame = (userName) => {
+    let isSuccess = false;
     for (let i = 0; i < 3; i++) {
+        const { progression, hiddenNumber } = getProgression(getRandomInt(1, 5), getRandomInt(1, 5), getRandomInt(5, 30));
         console.log('What number is missing in the progression?');
-        console.log(`Question: ${getProgression(getRandomInt(1, 5), getRandomInt(1, 5), getRandomInt(5, 30))}`);
+        console.log(`Question: ${progression}`);
         const checkResult = readlineSync.question('Your answer: ');
 
         if (hiddenNumber == checkResult) {
-            console.log('Correct!')
+            const win = console.log('Correct!');
+            if (i === 2) {
+                isSuccess = console.log(`Congratulations, ${userName}!`);
+            };
         } else {
             console.log(`${checkResult} is wrong answer ;(. Correct answer was ${hiddenNumber}. Let's try again, ${userName}!`);
             break;
         };
-        console.log(`Congratulations, ${userName}!`);
     };
 };
 
